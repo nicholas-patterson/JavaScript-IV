@@ -38,16 +38,17 @@ class Student extends Person {
     this.previousBackground = props.previousBackground;
     this.className = props.className;
     this.favSubjects = props.favSubjects;
-    this.grade = 50;
   }
-  listsSubjects(subjectArr) {
-    console.log(subjectArr.map(subject => subject));
+  listsSubjects() {
+    for (let i = 0; i < this.favSubjects.length; i++) {
+      return this.favSubjects;
+    }
   }
-  PRAssignment(student, subject) {
-    `${student.name} has submitted a PR for ${subject}`;
+  PRAssignment(subject) {
+    return `${this.name} has submitted a PR for ${subject}`;
   }
-  sprintChallenge(student, subject) {
-    `${student.name} has begun sprint challenge on ${subject}`;
+  sprintChallenge(subject) {
+    return `${this.name} has begun sprint challenge on ${subject}`;
   }
 }
 
@@ -127,9 +128,9 @@ console.log(joscelyn.location);
 console.log(joscelyn.previousBackground);
 console.log(joscelyn.className);
 console.log(joscelyn.favSubjects);
-joscelyn.PRAssignment(joscelyn, "Computer Science");
-joscelyn.listsSubjects(["Computer Science", "Philosophy", "English"]);
-joscelyn.sprintChallenge(isaiah, "English");
+console.log(joscelyn.PRAssignment("Javascript"));
+console.log(joscelyn.listsSubjects());
+console.log(joscelyn.sprintChallenge("English"));
 
 //PM LOGS
 
